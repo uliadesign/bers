@@ -263,12 +263,7 @@ http://vladimirkudinov.com
 /* Green Gradient (for progress and volume bar) */
 .mejs-controls .mejs-time-rail .mejs-time-current,
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-	background: #82d344;
-	background: -webkit-linear-gradient(top, #82d344 0%, #51af34 100%);
-	background: -moz-linear-gradient(top, #82d344 0%, #51af34 100%);
-	background: -o-linear-gradient(top, #82d344 0%, #51af34 100%);
-	background: -ms-linear-gradient(top, #82d344 0%, #51af34 100%);
-	background: linear-gradient(top, #82d344 0%, #51af34 100%);
+	background: #47a28a;
 }
 
 
