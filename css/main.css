@@ -1,0 +1,626 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+    height: 100%;
+}
+body {
+	line-height: 1;
+    font-size: 16px;
+    color: #424547;
+    font-family: 'HelveticaNeue';
+    font-weight:400;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {outline:none}
+
+a {color:#2da18f}
+a:hover,
+a:focus {
+    color:#2da18f;
+    outline:none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+svg {
+	min-width: 100%;
+	min-height: 100%;
+	fill: currentcolor;
+}
+
+.section-bg {
+	padding: 65px 0 25px;
+}
+.bg-grey {
+	background-color: #f2f4f7;
+}
+.bg-green {
+	background: transparent url("../img/aticle-bg.jpg") no-repeat center;
+	background-size:cover;
+}
+.bg-color {
+	background: transparent url("../img/color-bg.jpg") no-repeat center;
+	background-size:cover;
+}
+.bg-video {
+	background: transparent url("../img/video-bg.jpg") no-repeat center;
+	background-size:cover;
+}
+
+.bt {
+	display: block;
+	margin: 0; padding: 0;
+	border: 0;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	max-width: 190px;
+	padding: 0 10px;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+	border-radius: 40px;
+	text-transform: uppercase;
+}
+.bt.bt-primary {
+	color: #fff;
+	background-color: #47a28a;
+
+}
+.bt-white {
+	display: table;
+	border-bottom: 7px solid #357f6c;
+	border-radius: 22px;
+}
+.bt-white__inner {
+	display: block;
+	line-height: 70px;
+	height: 70px;
+	color: #47a28a;
+	font-size: 25px;
+	font-weight: 500;
+	border-radius: 15px;
+	padding: 0 20px;
+	border: solid 1px #357f6c;
+	text-align: center;
+}
+.bt-white:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.bt-white:hover .bt-white__inner {
+	color: #fff;
+	background-color: #47a28a;
+}
+.bt:hover {
+	opacity: .8;
+	text-decoration: none;
+}
+
+.main-slider {
+	width: 100%;
+	position: relative;
+}
+
+
+.main-article {
+	margin: -65px -15px 0;
+	padding-bottom: 45px;
+	position: relative;
+	z-index: 1;
+}
+.main-article__inner {
+	display: flex;
+	justify-content: space-between;
+}
+.main-article__inner--second {
+	background-color: #fff;
+}
+.main-article--second {
+	margin-top: 0;
+	padding: 65px 0 70px;
+}
+.main-article__img {
+	width: 100%;
+	max-width: 570px;
+	border: 10px solid #fff;
+}
+.main-article__img img {
+	float: left;
+}
+.main-article__container {
+	width: 100%; min-height: 100%;
+	max-width: 570px;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.main-article__container--second {
+	padding: 0 30px 0 0;
+}
+.main-article__container .bt {
+	float: right;
+}
+.main-article__sub-title {
+	color: #838c96;
+	text-transform: uppercase;
+	font-size: 21px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+.main-article__sub-title--second {
+	color: #333;
+	font-size: 25px;
+	margin-bottom: 15px;
+	margin-top: 0;
+	text-transform: none;
+}
+.main-article__title {
+	font-size: 54px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.main-article__title--second {
+	font-size: 45px;
+	color: #fff;
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+.main-article__desc {
+	font-size: 19px;
+	line-height: 22px;
+	margin-bottom: 10px;
+}
+
+.article-list {}
+.article-list__buttons {
+	display: flex;
+	justify-content: space-between;
+	margin:0 -35px 60px;
+}
+.article-list .bt {
+	margin-top: 17px;
+}
+.article-list__buttons .bt-white {
+	min-width: 30%;
+}
+.article-list__title {
+	font-size: 45px;
+	margin-bottom: 35px;
+	text-align: center;
+}
+.article-list__item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	color: #333;
+}
+.article-list__img {
+	position: relative;
+	border: 2px solid rgb(224, 224, 224);
+	border-radius: 50%;
+	min-width: 78px; min-height: 78px;
+	margin-right: 15px;
+}
+.article-list__ico {
+	position: absolute;
+	top: 4px; right: 4px; bottom: 4px; left: 4px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.article-list__ico svg {
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+	min-width: auto;
+	min-height: auto;
+	fill: #333333;
+}
+.article-list__ico--second svg {
+	fill: none!important;
+	stroke: #333333!important;
+}
+.article-list__item:hover {
+	color: #333;
+	text-decoration: none;
+}
+.article-list__item:hover .article-list__img {
+	border-color: #fff;
+}
+.article-list__item:hover .article-list__ico {
+	background-color: #47a28a;
+}
+.article-list__item:hover .article-list__ico svg {
+	fill: #ffffff;
+}
+.article-list__item:hover .article-list__ico--second svg {
+	fill: none!important;
+	stroke: #ffffff!important;
+}
+
+.article-list--second .article-list__ico {
+	background-color: #f2f4f7;
+}
+.article-list--second .article-list__item:hover .article-list__img {
+	border-color: #e1e1e1;
+}
+
+.second-slider {
+	margin: 0 -9px;
+}
+.slider__title {
+	font-size: 45px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.second-slider__inner {
+	padding-bottom: 65px;
+}
+.second-slider__img {
+	margin-bottom: 20px;
+}
+.second-slider__slide {
+	padding: 1px 1px 23px;
+	margin: 0 9px;
+	background-color: #ffffff;
+	text-align: center;
+}
+.second-slider__content {
+	position: relative;
+	padding-bottom: 25px;
+}
+.second-slider__content:before {
+	content: '';
+	position: absolute;
+	width: 60px; height: 2px;
+	bottom: 0; left: 50%;
+	margin-left: -30px;
+	background-color: #47a28a;
+}
+.second-slider__title {
+	font-size: 20px;
+	margin-bottom: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.second-slider__desc {
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #929292;
+}
+.second-slider__slide img {
+	width: 100%;
+}
+
+
+
+.ui-datepicker {
+	width: 100%;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	background-color: #47a28a;
+	position: relative;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 19px;
+	width: 1.8em;
+	height: 1.8em;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left: 5px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 5px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 3px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 3px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	color: #fff;
+	font-size: 18px;
+	line-height: 65px;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	line-height: 70px;
+	text-align: center;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+
+/* Icons */
+.ui-datepicker .ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	left: .5em;
+	top: .3em;
+}
+
+.ui-datepicker-calendar {
+	table-layout: fixed;
+
+}
+.ui-datepicker-calendar thead {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+.ui-datepicker-calendar tbody {
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.ui-datepicker-calendar tbody td {
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.ui-datepicker-calendar a {
+	text-align: center;
+}
+.ui-datepicker-calendar a.ui-state-default {
+	color: #ddd;
+}
+.ui-datepicker-calendar a.ui-state-active {
+	color: #333;
+	background-color: #fff;
+}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+	display: none;
+}
+.ui-datepicker-prev {
+	background: transparent url("../img/arrow-left.png") no-repeat center;
+}
+.ui-datepicker-next {
+	background: transparent url("../img/arrow-right.png") no-repeat center;
+}
+
+.calendar {}
+.calendar__title {
+	font-size: 45px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+.calendar__img {
+	margin-top: -50px;
+}
+.calendar__inner {
+	padding-top: 15px;
+}
+.calendar__input,
+.calendar__select {
+	width: 100%;
+	border:1px solid #ddd;
+	height: 48px;
+	line-height: 48px;
+	margin-bottom: 10px;
+	padding-left: 25px;
+	color: #999;
+}
+.calendar .bt {
+	margin: 0 auto;
+}
+
+#map {
+	width: 100%;
+	height: 300px;
+}
+
+.testimonials-slider__inner {
+	padding-bottom: 65px;
+	margin: 0 -5px;
+}
+.testimonials-slider__slide {
+	padding: 0 5px;
+}
+.testimonials-slider__content {
+	position: relative;
+	background-color: #fff;
+	padding: 35px 100px;
+	margin-bottom: 25px;
+}
+.testimonials-slider__content .quotes__left {
+	position: absolute;
+	left: 30px; top: 30px;
+	width: 20px; height: 15px;
+	color: #47a28a;
+}
+.testimonials-slider__content .quotes__right {
+	position: absolute;
+	right: 30px; bottom: 30px;
+	width: 20px; height: 15px;
+	color: #47a28a;
+}
+.testimonials-slider__img {
+	position: relative;
+	width: 60px; height: 60px;
+	border-radius: 50%;
+	position: relative;
+	border: 3px #ddd solid;
+	overflow: hidden;
+	margin-left: 25px;
+}
+.testimonials-slider__img img {
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}

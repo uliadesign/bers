@@ -1,0 +1,29 @@
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-clock {
+    width: 13px;
+    height: 13px;
+    background-position: -2px -2px;
+}
+
+.sprite-phone {
+    width: 15px;
+    height: 15px;
+    background-position: -19px -2px;
+}
+
+.sprite-pin {
+    width: 11px;
+    height: 16px;
+    background-position: -38px -2px;
+}
+
+.sprite-search {
+    width: 26px;
+    height: 26px;
+    background-position: -53px -2px;
+}

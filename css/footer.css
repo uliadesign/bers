@@ -1,0 +1,25 @@
+footer {
+    padding-top: 65px;
+    padding-bottom: 110px;
+    background: transparent url("../img/footer.png") no-repeat left bottom;
+}
+.footer__text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #47a28a;
+}
+.footer__title {
+    color: #47a28a;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.footer__item,
+.footer__link {
+    color: #606060;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
