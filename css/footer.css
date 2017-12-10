@@ -3,10 +3,14 @@ footer {
     padding-bottom: 110px;
     background: transparent url("../img/footer.png") no-repeat left bottom;
 }
+.footer__logo {
+    margin-bottom: 10px
+}
 .footer__text {
     font-size: 20px;
     font-weight: 500;
     color: #47a28a;
+    margin-right: 25px
 }
 .footer__title {
     color: #47a28a;
