@@ -159,7 +159,7 @@ svg {
 }
 .main-article--second {
 	margin-top: 0;
-	padding: 65px 0 70px;
+	padding: 70px 0 70px;
 }
 .main-article__img {
 	width: 100%;
@@ -171,13 +171,13 @@ svg {
 }
 .main-article__container {
 	width: 100%; min-height: 100%;
-	max-width: 570px;
-	padding-left: 20px;
+	max-width: 550px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 .main-article__container--second {
+    max-width: 570px;
 	padding: 0 30px 0 0;
 }
 .main-article__container .bt {
@@ -189,7 +189,7 @@ svg {
 	font-size: 21px;
 	font-weight: 700;
 	margin-bottom: 15px;
-	margin-top: 20px;
+	margin-top: 70px;
 }
 .main-article__sub-title--second {
 	color: #333;
@@ -201,14 +201,14 @@ svg {
 .main-article__title {
 	font-size: 54px;
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 .main-article__title--second {
 	font-size: 45px;
 	color: #fff;
 	text-align: center;
 	font-weight: 400;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 }
 .main-article__desc {
 	font-size: 19px;
@@ -216,17 +216,20 @@ svg {
 	margin-bottom: 10px;
 }
 
-.article-list {}
+.article-list {
+    margin: 0 -55px
+}
 .article-list__buttons {
 	display: flex;
 	justify-content: space-between;
-	margin:0 -35px 60px;
+	margin:0 0 60px;
 }
 .article-list .bt {
 	margin-top: 17px;
 }
 .article-list__buttons .bt-white {
-	min-width: 30%;
+	min-width: 32%;
+    background-color: #fff
 }
 .article-list__title {
 	font-size: 45px;
@@ -245,6 +248,10 @@ svg {
 	border-radius: 50%;
 	min-width: 78px; min-height: 78px;
 	margin-right: 15px;
+}
+.article-list__text {
+    font-size: 23px;
+    font-weight: 500
 }
 .article-list__ico {
 	position: absolute;

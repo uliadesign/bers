@@ -4,8 +4,10 @@ header {
 
 .header__row {
     display: flex;
+    width: 1200px;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 15px
 }
 .header__row:before,
 .header__row:after {
@@ -14,10 +16,44 @@ header {
 
 .header__center {
     width: 100%;
-    max-width: 810px;
+    max-width: 830px;
+    margin-top: 15px
 }
 .header__right {
-    width: 40px;
+    width: 50px;
+    padding-right: 15px
+}
+
+.round-button {
+    display: block;
+    position: relative;
+    background-color: #47a28a;
+    width: 33px; height: 33px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 33px;
+    text-align: center;
+}
+.round-button:first-of-type {
+    margin-bottom: 13px;
+}
+.round-button:hover {
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 0 3px #b6dad0;
+}
+.round-button__ico {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 15px; height: 15px;
+    color: #fff
+}
+.round-button__ico svg {
+    display: block
 }
 
 .top-contacts {
@@ -29,7 +65,8 @@ header {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 40px;
 }
 .top-contacts__item {
     display: flex;
@@ -43,14 +80,24 @@ header {
 .top-contacts__text {
     display: flex;
     flex-grow: 1;
-
+    font-size: 16px;
+    font-weight: 700;
+    color: #969696;
     flex-direction: column;
+}
+.top-contacts__text--second {
+    line-height: 21px;
+    margin-top: -2px;
 }
 .top-contacts__text-row {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 10px;
+    align-items: center
+}
+.top-contacts__text-row--second {
+    margin-bottom: 5px
 }
 .top-contacts__text-row__left {
     color: #969696;
@@ -89,11 +136,13 @@ header {
 }
 .menu-line__inner {
     display: flex;
+    width: 1200px
 }
 .main-menu {
     display: flex;
     flex-grow: 1;
     justify-content: space-around;
+    padding: 0 10px
 }
 .main-menu__link {
     line-height: 60px;
