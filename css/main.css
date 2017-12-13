@@ -83,6 +83,10 @@ svg {
 	background: transparent url("../img/color-bg.jpg") no-repeat center;
 	background-size:cover;
 }
+.bg-color2 {
+    background: transparent url("../img/color2-bg.jpg") no-repeat center;
+	background-size:cover;
+}
 .bg-video {
 	background: transparent url("../img/video-bg.jpg") no-repeat center;
 	background-size:cover;
@@ -111,7 +115,7 @@ svg {
 .bt-white {
 	display: table;
 	border-bottom: 7px solid #357f6c;
-	border-radius: 22px;
+	border-radius: 21px;
 }
 .bt-white__inner {
 	display: block;
