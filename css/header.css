@@ -1,5 +1,5 @@
 header {
-
+    padding-top: 15px
 }
 
 .header__row {
@@ -107,7 +107,9 @@ header {
     color: #333;
     text-transform: uppercase;
 }
-
+.top-contacts__text-row__right {
+    color: #333
+}
 .top-contacts__text-row__right--second {
     color: #47a28a;
     font-size: 22px;
