@@ -16,7 +16,8 @@ jQuery(document).ready(function ($) {
           adaptiveHeight: false,
           slidesToShow: 4,
           dots: true,
-          arrows: false
+          prevArrow: el.find('[data-slider-arrow-left]'),
+          nextArrow: el.find('[data-slider-arrow-right]'),
       });
     });
     $('[data-slider="testimonials-slider"]').each(function(){
@@ -26,7 +27,8 @@ jQuery(document).ready(function ($) {
             adaptiveHeight: false,
             slidesToShow: 2,
             dots: true,
-            arrows: false
+          prevArrow: el.find('[data-slider-arrow-left]'),
+          nextArrow: el.find('[data-slider-arrow-right]'),
         });
     });
 
