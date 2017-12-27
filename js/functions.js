@@ -38,13 +38,13 @@ jQuery(document).ready(function ($) {
         features: ['playpause','progress','volume','fullscreen'],
         success: function(mediaElement, domObject) {
             mediaElement.addEventListener('playing', function() {
-                $(this).parents('[data-video-container]').find('.video-container__text').hide()
+                $(this).parents('[data-video-container]').find('.video-container__text').hide();
+                $(this).parents('[data-video-container]').find('.mejs-controls').css("visibility", "visible");
             }, false);
             mediaElement.addEventListener('pause', function() {
-                $(this).parents('[data-video-container]').find('.video-container__text').show()
+                $(this).parents('[data-video-container]').find('.video-container__text').show();
             }, false);
         },
-
     });
 });
 

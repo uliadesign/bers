@@ -85,7 +85,7 @@ http://vladimirkudinov.com
 
 .mejs-inner .mejs-overlay-button {
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	width: 70px;
 	height: 70px;
@@ -106,6 +106,7 @@ http://vladimirkudinov.com
 	bottom: 0;
 	background: rgb(0,0,0); /* IE8- */
 	background: rgba(0,0,0, .7);
+    visibility: hidden;
 }
 
 /* Controls Buttons */
@@ -307,10 +308,10 @@ http://vladimirkudinov.com
 	left: 0; right: 0; top:55%;
 }
 .video-container__small .video-container__text {
-    top: 60%;
+    top: 65%;
 }
 .video-container__big .video-container__text {
-    top: 55%
+    top: 58%
 }
 .video-container__big:hover .video-container__text,
 .video-container__small:hover .video-container__text {
