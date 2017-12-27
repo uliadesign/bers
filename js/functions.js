@@ -35,10 +35,18 @@ jQuery(document).ready(function ($) {
     $('video').mediaelementplayer({
         alwaysShowControls: false,
         videoVolume: 'horizontal',
-        features: ['playpause','progress','volume','fullscreen']
+        features: ['playpause','progress','volume','fullscreen'],
+        success: function(mediaElement, domObject) {
+            mediaElement.addEventListener('playing', function() {
+                $(this).parents('[data-video-container]').find('.video-container__text').hide()
+            }, false);
+            mediaElement.addEventListener('pause', function() {
+                $(this).parents('[data-video-container]').find('.video-container__text').show()
+            }, false);
+        },
+
     });
 });
-
 
 $( function() {
 
@@ -78,8 +86,6 @@ $( function() {
 
     } ) );
 
-
-
     $('#datepicker').datepicker($.extend({
             inline: true
         }
@@ -87,7 +93,6 @@ $( function() {
 
     $.datepicker.setDefaults($.datepicker.regional['ru']);
 } );
-
 
 var map;
 function initMap() {

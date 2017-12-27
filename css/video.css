@@ -85,7 +85,7 @@ http://vladimirkudinov.com
 
 .mejs-inner .mejs-overlay-button {
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	width: 70px;
 	height: 70px;
@@ -296,16 +296,23 @@ http://vladimirkudinov.com
 	margin-bottom: 10px;
 }
 .video-container__text {
-	display: none;
+	visibility: hidden;
+    z-index: 100;
 	color: #fff;
 	font-size: 25px;
 	font-weight: 700;
 	position: absolute;
 	padding: 0 15px;
 	text-align: center;
-	left: 0; right: 0; top:60%;
+	left: 0; right: 0; top:55%;
+}
+.video-container__small .video-container__text {
+    top: 60%;
+}
+.video-container__big .video-container__text {
+    top: 55%
 }
 .video-container__big:hover .video-container__text,
 .video-container__small:hover .video-container__text {
-	display: block;
+	visibility: visible;
 }
