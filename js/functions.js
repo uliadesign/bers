@@ -18,6 +18,15 @@ jQuery(document).ready(function ($) {
           dots: true,
           prevArrow: el.find('[data-slider-arrow-left]'),
           nextArrow: el.find('[data-slider-arrow-right]'),
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows:false,
+                        slidesToShow: 2
+                    }
+                }
+            ]
       });
     });
     $('[data-slider="testimonials-slider"]').each(function(){
@@ -29,6 +38,20 @@ jQuery(document).ready(function ($) {
             dots: true,
           prevArrow: el.find('[data-slider-arrow-left]'),
           nextArrow: el.find('[data-slider-arrow-right]'),
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows:false
+                    }
+                },{
+                    breakpoint: 768,
+                    settings: {
+                        arrows:false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     });
 

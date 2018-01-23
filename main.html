@@ -5,6 +5,7 @@
     <title>title</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script
 			  src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -17,7 +18,7 @@
 </head>
 <body onload="initMap()">
     <header>
-        <div class="header__row container">
+        <div class="header__row">
             <div class="header__left">
                 <div class="logo">
                     <a href="/" title="">
@@ -89,12 +90,11 @@
                 <a href="#" class="round-button">
                     RU
                 </a>
-
             </div>
         </div>
 
-        <div class="menu-line">
-            <div class="menu-line__inner container">
+        <div class="menu-line hidden-xs">
+            <div class="menu-line__inner">
                 <a href="#" class="menu-bt" title="Что мы лечим"></a>
                 <ul class="main-menu">
                     <li class="main-menu__item">
@@ -209,7 +209,7 @@
                             Медицинский центр Берсенева» — это
                             лечение заболеваний позвоночника
                         </div>
-                        <div class="main-article__desc">
+                        <div class="main-article__desc main-article__desc--second">
                             Уже в течение почти 20 лет медицинский центр постоянно совершенствовался — существовало два отдельных подразделения для оказания медицинской помощи детям и взрослым. Медицинский коллектив  с годами увеличивался, внедрялись все новые технологии для оказания медицинской помощи, и несколько лет назад у Владимира Андреевича возникла идея о создании единого медицинского центра, объединяющего детское и взрослое отделение. Все было продумано до мелочей и с любовью к людям, строительные работы продолжались почти два года, ведь внимание к деталям – это отличительная черта характера  доктора Берсенева. Таким образом, в апреле 2014 года  в центре Киева, вблизи Львовской площади, открылся новый медицинский центр Берсенева по   адресу: г. Киев, ул.
                         </div>
                         <div class="main-article__bt">
@@ -939,19 +939,19 @@
             <div class="video-container">
                 <div class="video-container__big" data-video-container>
                     <div class="video-container__text">Детский психолог</div>
-                    <video id="vid1"width="705" height="538" poster="video/video1.png" preload="auto">
+                    <video id="vid1" width="100%" height="538" poster="video/video1.png" preload="auto">
                         <source src="video/cars.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container__small" data-video-container>
                     <div class="video-container__text">Детский психолог</div>
-                    <video id="vid2" width="405" height="264" poster="video/video2.png" preload="auto">
+                    <video id="vid2" width="100%" height="264" poster="video/video2.png" preload="auto">
                         <source src="video/cars.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-container__small" data-video-container>
                     <div class="video-container__text">Детский психолог</div>
-                    <video id="vid3" width="405" height="264" poster="video/video3.png" preload="auto">
+                    <video id="vid3" width="100%" height="264" poster="video/video3.png" preload="auto">
                         <source src="video/cars.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -969,7 +969,7 @@
                 <div class="col-xs-12 col-md-6">
                     <div id="datepicker"></div>
                 </div>
-                <div class="col-xs-12 col-md-6">
+                <div class="col-xs-12 col-md-6 hidden-xs hidden-sm">
                     <div class="calendar__img">
                         <img src="img/nurse.png" alt="">
                     </div>
@@ -1010,7 +1010,7 @@
         </div>
 
     </section>
-    <section class="section-bg bg-grey">
+    <section class="section-bg section--testimonials bg-grey">
         <div class="container">
 
             <div class="slider__title">

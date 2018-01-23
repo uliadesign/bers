@@ -73,7 +73,6 @@
 {
     visibility: hidden;
 }
-
 .slick-slide
 {
     display: none;
@@ -152,11 +151,17 @@
 .slick-arrow.slick-arrow--right {
     right: 0
 }
+@media (max-width: 992px) {
+    .slider-arrows {
+        display: none
+    }
+}
 .slick-dots {
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 0);
+    display: flex
 }
 .slick-dots li {
     float: left;
