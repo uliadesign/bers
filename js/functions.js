@@ -29,6 +29,25 @@ jQuery(document).ready(function ($) {
             ]
       });
     });
+    $('[data-slider="triple-slider"]').each(function(){
+      var el = $(this);
+
+      el.find('[data-slider-slides]').slick({
+          adaptiveHeight: false,
+          slidesToShow: 3,
+          prevArrow: el.find('[data-slider-arrow-left]'),
+          nextArrow: el.find('[data-slider-arrow-right]'),
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows:false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+      });
+    });
     $('[data-slider="testimonials-slider"]').each(function(){
         var el = $(this);
 

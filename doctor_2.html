@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/video.min.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=ru"></script>
+</head>
+<body onload="initMap()">
+    <header>
+        <div class="header__row">
+            <div class="header__left">
+                <div class="logo">
+                    <a href="/" title="">
+                        <img src="img/logo.png" alt="" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="header__center">
+
+                <div class="top-contacts">
+                    <div class="top-contacts__left">
+                        <div class="top-contacts__item">
+                            <div class="top-contacts__ico">
+                                <span class="sprite sprite-pin"></span>
+                            </div>
+                            <div class="top-contacts__text top-contacts__text--second">
+                                ул. Бульварно-Кудрявская <br /> 10-Б, Киев
+                            </div>
+                        </div>
+                        <div class="top-contacts__item">
+                            <div class="top-contacts__ico">
+                                <span class="sprite sprite-clock"></span>
+                            </div>
+                            <div class="top-contacts__text">
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Пн-Пт: 8:30-19:00</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Сб: 9:00 - 13:00</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Вс: Выходной</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-contacts__right">
+                        <div class="top-contacts__item">
+                            <div class="top-contacts__ico">
+                                <span class="sprite sprite-phone"></span>
+                            </div>
+                            <div class="top-contacts__text">
+                                <div class="top-contacts__text-row top-contacts__text-row--second">
+                                    <div class="top-contacts__text-row__left top-contacts__text-row__left--second">Контакт - центр</div>
+                                    <div class="top-contacts__text-row__right top-contacts__text-row__right--second">044 238 22 31</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Взрослое отделение</div>
+                                    <div class="top-contacts__text-row__right">044 272 11 81</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Детское отделение</div>
+                                    <div class="top-contacts__text-row__right">044 238 22 31</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__right">
+                <a href="#" class="round-button">
+                    <span class="round-button__ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                          <path id="Forma_1_копия_26" data-name="Forma 1 копия 26" class="cls-1" d="M1518.67,49.862l-2.32-2.323a1.2,1.2,0,0,0-1.7.032l-1.17,1.17c-0.08-.041-0.15-0.084-0.23-0.128a10.986,10.986,0,0,1-4.85-4.854c-0.04-.078-0.08-0.154-0.12-0.225l0.78-.784,0.39-.386a1.211,1.211,0,0,0,.03-1.707l-2.32-2.323a1.2,1.2,0,0,0-1.7.033l-0.66.658,0.02,0.018a3.869,3.869,0,0,0-.54.951,4.458,4.458,0,0,0-.24.965c-0.3,2.541.86,4.865,4,8.017,4.35,4.357,7.86,4.028,8.01,4.012a3.846,3.846,0,0,0,.96-0.243,3.72,3.72,0,0,0,.95-0.537l0.01,0.012,0.67-.649A1.221,1.221,0,0,0,1518.67,49.862Z" transform="translate(-1504 -38)"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" class="round-button">
+                    RU
+                </a>
+            </div>
+        </div>
+
+        <div class="menu-line hidden-xs">
+            <div class="menu-line__inner">
+                <a href="#" class="menu-bt" title="Что мы лечим"></a>
+                <ul class="main-menu">
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="О клинике">
+                            О клинике
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Теория метамерии">
+                            Теория метамерии
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link active" title="Доп.услуги">
+                            Доп.услуги
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Прайсы">
+                            Прайсы
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Книги">
+                            Книги
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Фонд Берсенева">
+                            Фонд Берсенева
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Контакты">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="search-bt">
+                    <span class="sprite sprite-search"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="section-bg doctor-article">
+        <div class="container">
+            <div class="article-list__title article-list__title--left">
+                Коваленко Андрей
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3 doctor-article__img">
+                    <img src="img/content/personal1.jpg" alt="">
+                </div>
+                <div class="col-xs-12 col-md-9 doctor-article__content">
+                    <div class="doctor-article__head">
+                        <div class="doctor-article__title">Врач-невропатолог</div>
+                        <div class="doctor-article__rating">
+                            <span>
+                                <img src="img/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="img/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="img/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="img/star.png" alt="">
+                            </span>
+                            <span>
+                                <img src="img/star.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="doctor-article__desc">
+                        <p><strong>Образование:</strong> институт Богомольця</p>
+                        <p><strong>Врачебный стаж:</strong> с 1999 года
+Сертифицированный специалист (2000 г.) по
+метамерным технологиям диагностики и лечения.</p>
+                    </div>
+                    <div class="doctor-article__buttons">
+                        <a href="#" class="bt bt-primary">Отзывы</a>
+                        <a href="#" class="bt bt-primary">Записаться</a>
+                        <a href="#" class="bt bt-primary">Задать вопрос</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bg bg-grey nb-pad">
+        <div class="container">
+            <article class="simple-article">
+                <div class="article-list__title">
+                    Детская неврология
+                </div>
+                <div class="simple-article__inner">
+                    <div class="simple-article__content">
+                        <div class="simple-article__desc">
+                            Очаговая неврологическая симптоматика (очаговый неврологический дефицит) — термин, который обозначает неврологические симптомы, свойственные для местного поражения определённых структур центральной или периферической нервной системы. Очаговая неврологическая симптоматика во многих случаях сочетается с общемозговой симптоматикой, являющейся проявлением диффузного повреждения Очаговая неврологическая симптоматика позволяет не только выявить наличие местного повреждения, но и осуществить топическую диагностику, то есть, достаточно достоверно определить область повреждения на основании знаний о нейроанатомии очаговая неврологическая симптоматика во многих случаях сочетается с общемозговой симптоматикой, являющейся проявлением диффузного повреждения повреждения на основании знаний о нейроанатомии.
+                        </div>
+                        <a href="#" class="bt bt-primary simple-article__bt" title="подробнее">подробнее</a>
+                    </div>
+                    <div class="simple-article__image">
+                        <img src="img/content/articles/simple_article2.png" alt="">
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="section-bg section-bg--buttons">
+        <div class="container">
+            <div class="article-list">
+                <div class="article-list__title">
+                    Детское отделение
+                </div>
+                <div class="article-list__buttons">
+                    <a href="#" class="bt-white">
+                        <span class="bt-white__inner">
+                            О метамерном лечении
+                        </span>
+                    </a>
+                    <a href="#" class="bt-white">
+                        <span class="bt-white__inner">
+                            Документы при поступлении
+                        </span>
+                    </a>
+                    <a href="#" class="bt-white">
+                        <span class="bt-white__inner">
+                            Вопросы и ответы
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="article-list__sub-title">
+                    Что мы лечим
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-bg section-bg--no-top">
+        <div class="container">
+            <div class="second-slider second-slider--marg" data-slider="triple-slider">
+                <div class="second-slider__inner" data-slider-slides>
+                    <article class="small-article small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article1.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название в две две две строчки</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article2.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article3.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article2.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article3.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="slider-arrows container">
+                    <div class="slick-arrow slick-arrow--left" data-slider-arrow-left>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24"><path d="M340.537,626.553A1.414,1.414,0,0,0,341,625.5v-21a1.414,1.414,0,0,0-.462-1.054,1.564,1.564,0,0,0-2.187,0l-10.887,10.5a1.434,1.434,0,0,0,0,2.109l10.887,10.5A1.564,1.564,0,0,0,340.537,626.553Z" transform="translate(-327 -603)"/></svg>
+                        </span>
+                    </div>
+                    <div class="slick-arrow slick-arrow--right" data-slider-arrow-right>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24"><path d="M1579.46,603.447a1.442,1.442,0,0,0-.46,1.054v21a1.446,1.446,0,0,0,.46,1.055,1.542,1.542,0,0,0,1.1.445,1.519,1.519,0,0,0,1.09-.445l10.89-10.5a1.439,1.439,0,0,0,0-2.109l-10.89-10.5a1.516,1.516,0,0,0-1.09-.446A1.539,1.539,0,0,0,1579.46,603.447Z" transform="translate(-1579 -603)"/></svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-bg bg-green">
+        <div class="container">
+           <div class="slider__title slider__title--white">Дополнительные услуги</div>
+            <div class="second-slider second-slider--marg" data-slider="triple-slider">
+                <div class="second-slider__inner" data-slider-slides>
+                    <article class="small-article small-article--white small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article1.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название в две две две строчки</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty small-article__bt" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--white small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article2.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty small-article__bt" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--white small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article3.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty small-article__bt" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--white small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article2.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty small-article__bt" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                    <article class="small-article small-article--white small-article--slide">
+                        <div class="small-article__image">
+                            <img src="img/content/articles/article3.png" alt="">
+                        </div>
+                        <div class="small-article__content">
+                           <div class="small-article__title">Название</div>
+                           <div class="small-article__desc">
+                                Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                            </div>
+                            <a href="#" class="bt bt-empty small-article__bt" title="подробнее">подробнее</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="slider-arrows container">
+                    <div class="slick-arrow slick-arrow--left" data-slider-arrow-left>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24"><path d="M340.537,626.553A1.414,1.414,0,0,0,341,625.5v-21a1.414,1.414,0,0,0-.462-1.054,1.564,1.564,0,0,0-2.187,0l-10.887,10.5a1.434,1.434,0,0,0,0,2.109l10.887,10.5A1.564,1.564,0,0,0,340.537,626.553Z" transform="translate(-327 -603)"/></svg>
+                        </span>
+                    </div>
+                    <div class="slick-arrow slick-arrow--right" data-slider-arrow-right>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24"><path d="M1579.46,603.447a1.442,1.442,0,0,0-.46,1.054v21a1.446,1.446,0,0,0,.46,1.055,1.542,1.542,0,0,0,1.1.445,1.519,1.519,0,0,0,1.09-.445l10.89-10.5a1.439,1.439,0,0,0,0-2.109l-10.89-10.5a1.516,1.516,0,0,0-1.09-.446A1.539,1.539,0,0,0,1579.46,603.447Z" transform="translate(-1579 -603)"/></svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-bg bg-grey">
+        <div class="container">
+
+                <div class="slider__title">
+                    Доктор Берсенев Объясняет
+                </div>
+                <div class="second-slider" data-slider="second-slider">
+
+                    <div class="second-slider__inner" data-slider-slides>
+                        <article class="small-article small-article--slide">
+                            <div class="small-article__image">
+                                <img src="img/content/articles/article1.png" alt="">
+                            </div>
+                            <div class="small-article__title">Название</div>
+                            <div class="small-article__content">
+                               <div class="small-article__desc">
+                                    Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                                </div>
+                            </div>
+                        </article>
+                        <article class="small-article small-article--slide">
+                            <div class="small-article__image">
+                                <img src="img/content/articles/article2.png" alt="">
+                            </div>
+                            <div class="small-article__title">Название</div>
+                            <div class="small-article__content">
+                               <div class="small-article__desc">
+                                    Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                                </div>
+                            </div>
+                        </article>
+                        <article class="small-article small-article--slide">
+                            <div class="small-article__image">
+                                <img src="img/content/articles/article3.png" alt="">
+                            </div>
+                            <div class="small-article__title">Название</div>
+                            <div class="small-article__content">
+                               <div class="small-article__desc">
+                                    Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                                </div>
+                            </div>
+                        </article>
+                        <article class="small-article small-article--slide">
+                            <div class="small-article__image">
+                                <img src="img/content/articles/article4.png" alt="">
+                            </div>
+                            <div class="small-article__title">Название</div>
+                            <div class="small-article__content">
+                               <div class="small-article__desc">
+                                    Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                                </div>
+                            </div>
+                        </article>
+                        <article class="small-article small-article--slide">
+                            <div class="small-article__image">
+                                <img src="img/content/articles/article5.png" alt="">
+                            </div>
+                            <div class="small-article__title">Название</div>
+                            <div class="small-article__content">
+                               <div class="small-article__desc">
+                                    Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                                </div>
+                            </div>
+                        </article>
+                        <article class="small-article small-article--slide">
+                            <div class="small-article__image">
+                                <img src="img/content/articles/article6.png" alt="">
+                            </div>
+                            <div class="small-article__title">Название</div>
+                            <div class="small-article__content">
+                               <div class="small-article__desc">
+                                    Уже в течение почти 20 лет медицинский центр отдельных подразделения для оказания медицинской помощи детям и взрослым.
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="slider-arrows container">
+                        <div class="slick-arrow slick-arrow--left" data-slider-arrow-left>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24"><path d="M340.537,626.553A1.414,1.414,0,0,0,341,625.5v-21a1.414,1.414,0,0,0-.462-1.054,1.564,1.564,0,0,0-2.187,0l-10.887,10.5a1.434,1.434,0,0,0,0,2.109l10.887,10.5A1.564,1.564,0,0,0,340.537,626.553Z" transform="translate(-327 -603)"/></svg>
+                            </span>
+                        </div>
+                        <div class="slick-arrow slick-arrow--right" data-slider-arrow-right>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24"><path d="M1579.46,603.447a1.442,1.442,0,0,0-.46,1.054v21a1.446,1.446,0,0,0,.46,1.055,1.542,1.542,0,0,0,1.1.445,1.519,1.519,0,0,0,1.09-.445l10.89-10.5a1.439,1.439,0,0,0,0-2.109l-10.89-10.5a1.516,1.516,0,0,0-1.09-.446A1.539,1.539,0,0,0,1579.46,603.447Z" transform="translate(-1579 -603)"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="footer__logo">
+                        <a href="/" title="">
+                            <img src="img/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="footer__text">
+                        Медицинский центр Берсенева»
+                        это лечение заболеваний
+                        позвоночника, суставов и
+                        нервной системы.
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="footer__title">
+                        Навигация
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Услуги">Услуги</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="О компании">О компании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Прайсы">Прайсы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Книги">Книги</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Отзывы">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="footer__title">
+                        Контакты
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            Киев, ул. Бульварно-Кудрявская
+                        </li>
+                        <li class="footer__item">
+                            Тел. +38 044 33 22
+                        </li>
+                        <li class="footer__item">
+                            Mail: Mail@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="footer__title">
+                        Режим работы
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            Пн - Пт 09:00 - 18:00
+                        </li>
+                        <li class="footer__item">
+                            Сб - 09:00 - 17:00
+                        </li>
+                        <li class="footer__item">
+                            Вс - Выходной
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+</body>
+</html>
