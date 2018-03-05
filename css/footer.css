@@ -23,12 +23,23 @@ footer {
         font-size: 18px;
     }
 }
+@media (min-width: 768px) {
+    .footer__small-menu {
+        padding-left: 0
+    }
+}
 .footer__title {
     color: #47a28a;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 25px;
     margin-top: 10px;
+}
+.footer__soc {
+    display: flex
+}
+.footer__soc .round-button {
+    margin-right: 10px
 }
 @media (max-width: 768px) {
     .footer__title {

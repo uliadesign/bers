@@ -275,6 +275,12 @@ http://vladimirkudinov.com
 	width: 100%;
 	background-color: #fff;
 }
+.video-container__bt {
+    margin: 40px 0 25px;
+}
+.video-container__bt .bt {
+    margin: 0 auto;
+}
 .video-container__big {
 	position: relative;
 	float: left;

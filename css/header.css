@@ -3,10 +3,9 @@ header {
     width: 100%;
     padding-top: 15px
 }
-
 .header__row {
     display: flex;
-    width: 1200px;
+    width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
     align-items: center;
@@ -20,8 +19,134 @@ header {
 }
 @media (max-width: 768px) {
     .header__row {
-        display: block
+        display: table
     }
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+}
+@media (max-width: 450px) {
+    .logo {
+        flex-direction: column;
+    }
+    .logo > a {
+        margin-bottom: 10px;
+    }
+    .mobile-block {
+        margin-left: 0!important
+    }
+    .mobile-menu {
+        top: 100%!important
+    }
+}
+.mobile-block {
+    display: none;
+    margin-left: 10px;
+}
+.mobile-block__inner {
+    display: flex;
+    font-size: 0;
+}
+.mobile-menu-bt {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 15px;
+    border: 1px solid #37806d;
+}
+.mobile-menu-bt1 {
+    background-color: #37806d;
+}
+.mobile-menu-bt__text {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+@media (max-width: 600px) {
+    .mobile-menu-bt__text {
+        font-size: 13px;
+    }
+}
+.mobile-menu-bt1 .mobile-menu-bt__text {
+    color: #fff
+}
+.mobile-menu-bt2 {
+    background-color: #fff;
+}
+.mobile-menu-bt2 .mobile-menu-bt__text {
+    color: #37806d
+}
+.mobile-menu-bt__ico {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px;
+    width: 40px; height: 40px;
+}
+.mobile-menu-bt__ico-inner {
+    width: 27px; height: 19px;
+}
+.mobile-menu-bt1 .mobile-menu-bt__ico-inner svg {
+    fill:#fff;
+}
+.mobile-menu-bt2 .mobile-menu-bt__ico-inner svg {
+    fill:#37806d;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    background-color: #37806d;
+    font-size: 16px;
+    padding: 5px 0;
+    z-index: 2;
+    top: 68%; left:-15px; right: -15px;
+}
+.mobile-menu.open {
+    display: block;
+}
+.mobile-menu a {
+    display: block;
+    font-weight: bold;
+    padding: 8px 20px;
+    color: #fff;
+    text-transform: uppercase
+}
+.mobile-menu a:hover {
+    text-decoration: none
+}
+.mobile-menu .has-sub > ul {
+    display: none;
+    padding-left: 15px;
+}
+.mobile-menu .has-sub {
+    position: relative;
+}
+
+
+.mobile-menu li.has-sub::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 7px;
+    background: url("../img/menu-arrow.png") no-repeat left top;
+    right: 10px;
+    top: 13px;
+    transform: rotateZ(90deg);
+}
+
+
+.mobile-menu .has-sub > ul a {
+    text-transform: none
+}
+.mobile-menu .has-sub.open > ul {
+    display: block
+}
+.mobile-menu .has-sub.open {
+    background-color: #47a491;
 }
 
 .header__row:before,
@@ -52,6 +177,9 @@ header {
         padding-right: 0
     }
 }
+.header__right--mobile {
+    padding-top: 10px
+}
 .round-button {
     display: block;
     position: relative;
@@ -72,6 +200,9 @@ header {
     text-decoration: none;
     box-shadow: 0 0 0 3px #b6dad0;
 }
+.top-contacts__item-row .round-button {
+    margin: 10px 5px 0
+}
 .round-button__ico {
     position: absolute;
     left: 50%; top: 50%;
@@ -79,6 +210,9 @@ header {
     display: block;
     width: 15px; height: 15px;
     color: #fff
+}
+.round-button__ico--fb {
+    width: 8px; height: 17px
 }
 .round-button__ico svg {
     display: block
@@ -121,12 +255,29 @@ header {
     .top-contacts__left {
         width: 100%;
         margin-right: 0;
-        margin-left: 22px;
-        flex-direction: row
+        margin-left: 0;
+        flex-direction: row;
+    }
+}
+@media (max-width: 460px) {
+    .top-contacts__left {
+        flex-direction: column;
+    }
+    .top-contacts__left .top-contacts__row {
+        margin-bottom: 10px;
     }
 }
 .top-contacts__item {
     display: flex;
+}
+.top-contacts__row {
+    flex-direction: column
+}
+.top-contacts__item-row {
+    display: flex
+}
+.top-contacts__item-row--soc {
+    padding-left: 15px
 }
 .top-contacts__right {
     width: 325px;
@@ -180,7 +331,15 @@ header {
 .top-contacts__text-row__left {
     color: #969696;
     font-weight: 700;
-    font-size: 12px
+    font-size: 16px
+}
+@media (max-width: 768px) {
+    .top-contacts__text-row__left {
+        font-size: 12px
+    }
+    .top-contacts__text {
+        font-size: 12px
+    }
 }
 .top-contacts__text-row__left--second {
     color: #333;
@@ -212,21 +371,55 @@ header {
     background: #37806d url("../img/menu_bt.png") no-repeat center;
 }
 .search-bt {
-    position:relative;
     width: 68px; height: 60px;
     border-left: 1px solid #fff;
 }
+.search-bt--mobile {
+    width: 40px; height: 42px;
+    border: 0;
+    background: #43a28b url(../img/ico/search-small.png) no-repeat center;
+}
 .search-bt .sprite {
+    margin: 15px auto 0;
+}
+.search-form {
+    display: none;
+    overflow: hidden;
     position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #fff;
+    top: 100%; left: 15px; right: 15px;
+    height: 58px;
+    box-shadow: 0 0 8px rgba(18,96,80,.19);
+    z-index: 2
+}
+.search-form--mobile {
+    top: 69%; left: 0; right: 0;
+}
+@media (max-width: 450px) {
+    .search-form--mobile {
+        top: 100%;
+    }
+}
+.search-form.open {
+    display: block
+}
+.search-form .search-text {
+    border: 0;
+    color: #333;
+    font-size: 16px;
+    padding: 0 0 0 25px;
+    width: 100%; height: 58px;
+}
+.search-form .search-bt {
+    position: absolute;
+    right: -99999px;
 }
 .menu-line {
     background-color: #47a28a;
 }
 .menu-line__inner {
     display: flex;
-    width: 1200px;
+    width: 1170px;
     margin: 0 auto;
     padding: 0 15px
 }
@@ -238,8 +431,19 @@ header {
 .main-menu {
     display: flex;
     flex-grow: 1;
-    justify-content: space-around;
-    padding: 0 10px
+    justify-content: space-between;
+}
+.main-menu__item {
+    padding: 0 15px;
+}
+.main-menu__item > ul {
+    background-color: #37806d;
+}
+.main-menu__item:hover {
+    background-color: #37806d;
+}
+.main-menu__item:hover > ul {
+    display: block
 }
 .main-menu__link {
     line-height: 60px;
@@ -249,12 +453,189 @@ header {
     text-transform: uppercase;
     font-weight: 600;
 }
+@media (max-width: 1150px) {
+    .main-menu__item {
+        padding: 0 10px
+    }
+}
+@media (max-width: 1050px) {
+    .main-menu__link {
+        font-size:13px
+    }
+}
 @media (max-width: 992px) {
     .main-menu__link {
         font-size:12px
     }
 }
+@media (max-width: 850px) {
+    .main-menu__item {
+        padding: 0 5px
+    }
+    .main-menu__link {
+        font-size:11px
+    }
+}
 .main-menu__link:hover {
     color: #fff;
     text-decoration: none;
+}
+
+#cssmenu {
+    position: relative;
+    flex-grow: 1;
+    z-index: 100
+}
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+#cssmenu > ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 500;
+}
+
+#cssmenu > ul > li {
+    position: relative;
+    margin: 0;
+}
+#cssmenu > ul > #menu-button {
+    display: none;
+}
+#cssmenu ul li a {
+    display: block;
+    text-decoration: none;
+}
+#cssmenu li.has-sub::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+#cssmenu ul ul {
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    left: -99999px;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease, top .25s ease;
+    -moz-transition: opacity .3s ease, top .25s ease;
+    -ms-transition: opacity .3s ease, top .25s ease;
+    -o-transition: opacity .3s ease, top .25s ease;
+    transition: opacity .3s ease, top .25s ease;
+    z-index: 1000;
+}
+#cssmenu ul > li > a {
+    text-transform: uppercase
+}
+#cssmenu ul ul ul > li > a {
+    text-transform: inherit
+}
+#cssmenu ul > li > ul {
+    background-color: #37806d
+}
+#cssmenu ul > li:hover {
+    background-color: #47a491
+}
+#cssmenu ul.main-menu > li:hover {
+    background-color: #37806d
+}
+#cssmenu ul ul ul {
+    left: 100%;
+    transform: translate(0,0);
+}
+#cssmenu ul ul li {
+    position: relative;
+}
+#cssmenu ul ul li:last-of-type {
+    border-bottom:0;
+}
+#cssmenu > ul > li:hover > ul {
+    left:0; top:100%;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+#cssmenu.align-right > ul > li:hover > ul {
+    left: auto;
+    right: 0;
+    opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+    top: 0;
+    opacity: 1;
+    background-color: #47a491
+}
+
+#cssmenu ul ul li:hover > ul li:hover {
+    background-color: #37806d
+}
+
+#cssmenu ul ul li a {
+    white-space: nowrap;
+    padding: 12px 40px 12px 20px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+#cssmenu.align-right ul ul li a {
+    text-align: right;
+}
+#cssmenu ul ul li:hover > a {
+    color: #fff;
+}
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last > a {
+    border-bottom: 0;
+}
+#cssmenu.align-right > ul > li > ul::after {
+    left: auto;
+    right: 30px;
+}
+#cssmenu ul ul li.has-sub::after {
+    width: 8px; height: 7px;
+    background: url("../img/menu-arrow.png") no-repeat left top;
+    right: 10px;
+    top: 15px;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+#cssmenu.align-right ul ul li.has-sub::after {
+    border-left-color: transparent;
+    border-right-color: #9ea2a5;
+    right: auto;
+    left: 10px;
+}
+#cssmenu ul ul li.has-sub:hover::after {
+    border-left-color: #ffffff;
+    right: 10px;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+#cssmenu.align-right ul ul li.has-sub:hover::after {
+    border-right-color: #ffffff;
+    border-left-color: transparent;
+    left: -5px;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }

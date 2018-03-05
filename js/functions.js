@@ -10,14 +10,14 @@ jQuery(document).ready(function ($) {
       });
     });
     $('[data-slider="second-slider"]').each(function(){
-      var el = $(this);
+      var els = $(this);
 
-      el.find('[data-slider-slides]').slick({
+      els.find('[data-slider-slides]').slick({
           adaptiveHeight: false,
           slidesToShow: 4,
           dots: true,
-          prevArrow: el.find('[data-slider-arrow-left]'),
-          nextArrow: el.find('[data-slider-arrow-right]'),
+          prevArrow: els.find('[data-slider-arrow-left]'),
+          nextArrow: els.find('[data-slider-arrow-right]'),
             responsive: [
                 {
                     breakpoint: 768,
@@ -29,50 +29,50 @@ jQuery(document).ready(function ($) {
             ]
       });
     });
-    $('[data-slider="triple-slider"]').each(function(){
-      var el = $(this);
-
-      el.find('[data-slider-slides]').slick({
-          adaptiveHeight: false,
-          slidesToShow: 3,
-          prevArrow: el.find('[data-slider-arrow-left]'),
-          nextArrow: el.find('[data-slider-arrow-right]'),
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows:false,
-                        slidesToShow: 1
-                    }
-                }
-            ]
-      });
-    });
-    $('[data-slider="testimonials-slider"]').each(function(){
-        var el = $(this);
-
-        el.find('[data-slider-slides]').slick({
-            adaptiveHeight: false,
-            slidesToShow: 2,
-            dots: true,
-          prevArrow: el.find('[data-slider-arrow-left]'),
-          nextArrow: el.find('[data-slider-arrow-right]'),
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows:false
-                    }
-                },{
-                    breakpoint: 768,
-                    settings: {
-                        arrows:false,
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    });
+//    $('[data-slider="triple-slider"]').each(function(){
+//      var elt = $(this);
+//
+//      elt.find('[data-slider-slides]').slick({
+//          adaptiveHeight: false,
+//          slidesToShow: 3,
+//          prevArrow: elt.find('[data-slider-arrow-left]'),
+//          nextArrow: elt.find('[data-slider-arrow-right]'),
+//            responsive: [
+//                {
+//                    breakpoint: 768,
+//                    settings: {
+//                        arrows:false,
+//                        slidesToShow: 1
+//                    }
+//                }
+//            ]
+//      });
+//    });
+//    $('[data-slider="testimonials-slider"]').each(function(){
+//        var eltm = $(this);
+//
+//        eltm.find('[data-slider-slides]').slick({
+//            adaptiveHeight: false,
+//            slidesToShow: 2,
+//            dots: true,
+//          prevArrow: eltm.find('[data-slider-arrow-left]'),
+//          nextArrow: eltm.find('[data-slider-arrow-right]'),
+//            responsive: [
+//                {
+//                    breakpoint: 992,
+//                    settings: {
+//                        arrows:false
+//                    }
+//                },{
+//                    breakpoint: 768,
+//                    settings: {
+//                        arrows:false,
+//                        slidesToShow: 1
+//                    }
+//                }
+//            ]
+//        });
+//    });
 
     $('video').mediaelementplayer({
         alwaysShowControls: false,
@@ -151,3 +151,26 @@ function initMap() {
         icon: 'img/pin.png'
     });
 };
+
+$('.mobile-menu').on('click', function(){
+   $('#cssmenu').toggleClass('open');
+});
+$('.menu__inner li').on('click', function(){
+    $(this).toggleClass('openli');
+});
+
+$('[data-search-bt]').on('click', function(){
+    $('.search-form').toggleClass('open');
+})
+$('[data-mobile-search-bt]').on('click', function(){
+    $('[data-mobile-search]').toggleClass('open');
+})
+$('[data-mobile-menu1] .has-sub > a').on('click', function(e){
+    e.preventDefault;
+
+    $(this).parent().toggleClass('open')
+})
+
+$('[data-mobile-menu-bt1]').on('click', function(){
+    $('[data-mobile-menu1]').toggleClass('open')
+})

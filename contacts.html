@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/video.min.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=ru"></script>
+</head>
+<body onload="initMap()">
+    <header>
+        <div class="header__row">
+            <div class="header__left">
+                <div class="logo">
+                    <a href="/" title="">
+                        <img src="img/logo.png" alt="" />
+                    </a>
+                    <div class="mobile-block visible-xs">
+                       <div class="mobile-block__inner">
+                        <div class="mobile-menu-bt mobile-menu-bt1" data-mobile-menu-bt1>
+                            <span class="mobile-menu-bt__ico">
+                               <span class="mobile-menu-bt__ico-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M25.436,10.978 L2.055,10.978 C1.453,10.978 0.959,10.497 0.959,9.908 C0.959,9.321 1.453,8.840 2.055,8.840 L25.436,8.840 C26.039,8.840 26.532,9.321 26.532,9.908 C26.532,10.497 26.039,10.978 25.436,10.978 ZM25.436,2.956 L2.055,2.956 C1.453,2.956 0.959,2.476 0.959,1.887 C0.959,1.299 1.453,0.818 2.055,0.818 L25.436,0.818 C26.039,0.818 26.532,1.299 26.532,1.887 C26.532,2.476 26.039,2.956 25.436,2.956 ZM2.055,16.861 L25.436,16.861 C26.039,16.861 26.532,17.342 26.532,17.930 C26.532,18.518 26.039,18.999 25.436,18.999 L2.055,18.999 C1.453,18.999 0.959,18.518 0.959,17.930 C0.959,17.342 1.453,16.861 2.055,16.861 Z"/>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="mobile-menu-bt__text">Меню</span>
+                        </div>
+                        <div class="mobile-menu-bt mobile-menu-bt2">
+                            <span class="mobile-menu-bt__ico">
+                               <span class="mobile-menu-bt__ico-inner">
+                                    <svg xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M25.436,10.978 L2.055,10.978 C1.453,10.978 0.959,10.497 0.959,9.908 C0.959,9.321 1.453,8.840 2.055,8.840 L25.436,8.840 C26.039,8.840 26.532,9.321 26.532,9.908 C26.532,10.497 26.039,10.978 25.436,10.978 ZM25.436,2.956 L2.055,2.956 C1.453,2.956 0.959,2.476 0.959,1.887 C0.959,1.299 1.453,0.818 2.055,0.818 L25.436,0.818 C26.039,0.818 26.532,1.299 26.532,1.887 C26.532,2.476 26.039,2.956 25.436,2.956 ZM2.055,16.861 L25.436,16.861 C26.039,16.861 26.532,17.342 26.532,17.930 C26.532,18.518 26.039,18.999 25.436,18.999 L2.055,18.999 C1.453,18.999 0.959,18.518 0.959,17.930 C0.959,17.342 1.453,16.861 2.055,16.861 Z"/>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="mobile-menu-bt__text">Диагнозы</span>
+                        </div>
+
+                        <a href="#" class="search-bt search-bt--mobile" data-mobile-search-bt>
+                        </a>
+                        <form action="#" class="search-form search-form--mobile" data-mobile-search>
+                            <input class="search-text" type="text" placeholder="Введите поисковое слово..." value="">
+                            <input class="search-bt" type="submit" value="">
+                        </form>
+                        <ul class="mobile-menu" data-mobile-menu1>
+                            <li>
+                                <a href="#" title="Прием психолога">Прием психолога</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Прием семейного врача">Прием семейного врача</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Инфузионная терапия">Инфузионная терапия</a>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#" title="Метамерный массаж">Метамерный массаж</a>
+
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Общий метамерный массаж">Общий метамерный массаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж спины">Метамерный массаж спины</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж головы">Метамерный массаж головы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж рук">Метамерный массаж рук</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж воротниковой зоны">Метамерный массаж воротниковой зоны</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" title="Кинезиотейпинг">Кинезиотейпинг</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Изготовление Ортеза">Изготовление Ортеза</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Изготовление ортопедических стелек">Изготовление ортопедических стелек</a>
+                            </li>
+                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__center">
+
+                <div class="top-contacts">
+                    <div class="top-contacts__left">
+                        <div class="top-contacts__item top-contacts__row">
+                           <div class="top-contacts__item-row">
+                                <div class="top-contacts__ico">
+                                    <span class="sprite sprite-pin"></span>
+                                </div>
+                                <div class="top-contacts__text top-contacts__text--second">
+                                    ул. Бульварно-Кудрявская <br /> 10-Б, Киев
+                                </div>
+                            </div>
+                            <div class="top-contacts__item-row top-contacts__item-row--soc hidden-xs hidden-sm">
+                                <a href="#" class="round-button">
+                                    <span class="round-button__ico round-button__ico--fb">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="17px">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M1.728,3.293 L1.728,5.632 L-0.001,5.632 L-0.001,8.494 L1.728,8.494 L1.728,17.000 L5.281,17.000 L5.281,8.495 L7.665,8.495 C7.665,8.495 7.888,7.123 7.997,5.622 L5.295,5.622 L5.295,3.665 C5.295,3.373 5.682,2.980 6.065,2.980 L8.001,2.980 L8.001,-0.000 L5.368,-0.000 C1.641,-0.000 1.728,2.864 1.728,3.293 L1.728,3.293 Z"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="#" class="round-button">
+                                    <span class="round-button__ico round-button__ico--ig">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                         width="15px" height="15px">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M14.434,0.566 C14.056,0.188 13.604,-0.001 13.076,-0.001 L1.924,-0.001 C1.396,-0.001 0.944,0.188 0.566,0.566 C0.189,0.943 -0.000,1.396 -0.000,1.923 L-0.000,13.076 C-0.000,13.603 0.189,14.056 0.566,14.433 C0.944,14.811 1.396,15.000 1.924,15.000 L13.076,15.000 C13.604,15.000 14.056,14.811 14.433,14.433 C14.811,14.056 15.000,13.603 15.000,13.076 L15.000,1.923 C15.000,1.396 14.811,0.943 14.434,0.566 L14.434,0.566 ZM5.385,5.405 C5.975,4.835 6.683,4.550 7.510,4.550 C8.343,4.550 9.055,4.835 9.643,5.405 C10.233,5.975 10.527,6.663 10.527,7.471 C10.527,8.278 10.233,8.966 9.643,9.536 C9.055,10.106 8.344,10.390 7.510,10.390 C6.683,10.390 5.975,10.105 5.385,9.536 C4.797,8.966 4.502,8.278 4.502,7.471 C4.502,6.663 4.797,5.975 5.385,5.405 L5.385,5.405 ZM13.301,12.676 C13.301,12.845 13.243,12.987 13.125,13.101 C13.008,13.215 12.868,13.271 12.705,13.271 L2.265,13.271 C2.096,13.271 1.955,13.215 1.841,13.101 C1.727,12.987 1.670,12.845 1.670,12.676 L1.670,6.348 L3.047,6.348 C2.917,6.757 2.851,7.184 2.851,7.626 C2.851,8.877 3.307,9.943 4.218,10.825 C5.130,11.707 6.227,12.149 7.510,12.149 C8.356,12.149 9.138,11.947 9.854,11.543 C10.570,11.139 11.136,10.591 11.553,9.897 C11.970,9.204 12.178,8.447 12.178,7.626 C12.178,7.184 12.113,6.758 11.983,6.348 L13.301,6.348 L13.301,12.676 ZM13.301,3.955 C13.301,4.143 13.236,4.303 13.106,4.433 C12.976,4.564 12.816,4.628 12.627,4.628 L10.928,4.628 C10.739,4.628 10.579,4.564 10.449,4.433 C10.319,4.303 10.254,4.143 10.254,3.955 L10.254,2.343 C10.254,2.161 10.319,2.003 10.449,1.869 C10.579,1.736 10.739,1.669 10.928,1.669 L12.627,1.669 C12.816,1.669 12.976,1.736 13.106,1.869 C13.236,2.003 13.301,2.161 13.301,2.343 L13.301,3.955 Z"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="top-contacts__item">
+                            <div class="top-contacts__ico">
+                                <span class="sprite sprite-clock"></span>
+                            </div>
+                            <div class="top-contacts__text">
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Пн-Пт: 8:30-19:00</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Сб: 9:00 - 13:00</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Вс: Выходной</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-contacts__right">
+                        <div class="top-contacts__item">
+                            <div class="top-contacts__ico">
+                                <span class="sprite sprite-phone"></span>
+                            </div>
+                            <div class="top-contacts__text">
+                                <div class="top-contacts__text-row top-contacts__text-row--second">
+                                    <div class="top-contacts__text-row__left top-contacts__text-row__left--second">Контакт - центр</div>
+                                    <div class="top-contacts__text-row__right top-contacts__text-row__right--second">044 238 22 31</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Взрослое отделение</div>
+                                    <div class="top-contacts__text-row__right">044 272 11 81</div>
+                                </div>
+                                <div class="top-contacts__text-row">
+                                    <div class="top-contacts__text-row__left">Детское отделение</div>
+                                    <div class="top-contacts__text-row__right">044 238 22 31</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__right">
+                <a href="#" class="round-button">
+                    <span class="round-button__ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                          <path id="Forma_1_копия_26" data-name="Forma 1 копия 26" class="cls-1" d="M1518.67,49.862l-2.32-2.323a1.2,1.2,0,0,0-1.7.032l-1.17,1.17c-0.08-.041-0.15-0.084-0.23-0.128a10.986,10.986,0,0,1-4.85-4.854c-0.04-.078-0.08-0.154-0.12-0.225l0.78-.784,0.39-.386a1.211,1.211,0,0,0,.03-1.707l-2.32-2.323a1.2,1.2,0,0,0-1.7.033l-0.66.658,0.02,0.018a3.869,3.869,0,0,0-.54.951,4.458,4.458,0,0,0-.24.965c-0.3,2.541.86,4.865,4,8.017,4.35,4.357,7.86,4.028,8.01,4.012a3.846,3.846,0,0,0,.96-0.243,3.72,3.72,0,0,0,.95-0.537l0.01,0.012,0.67-.649A1.221,1.221,0,0,0,1518.67,49.862Z" transform="translate(-1504 -38)"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" class="round-button">
+                    RU
+                </a>
+
+                <div class="header__right--mobile visible-xs visible-sm">
+                    <a href="#" class="round-button">
+                        <span class="round-button__ico round-button__ico--fb">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="17px">
+                                <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                 d="M1.728,3.293 L1.728,5.632 L-0.001,5.632 L-0.001,8.494 L1.728,8.494 L1.728,17.000 L5.281,17.000 L5.281,8.495 L7.665,8.495 C7.665,8.495 7.888,7.123 7.997,5.622 L5.295,5.622 L5.295,3.665 C5.295,3.373 5.682,2.980 6.065,2.980 L8.001,2.980 L8.001,-0.000 L5.368,-0.000 C1.641,-0.000 1.728,2.864 1.728,3.293 L1.728,3.293 Z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" class="round-button">
+                        <span class="round-button__ico round-button__ico--ig">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                             width="15px" height="15px">
+                                <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                 d="M14.434,0.566 C14.056,0.188 13.604,-0.001 13.076,-0.001 L1.924,-0.001 C1.396,-0.001 0.944,0.188 0.566,0.566 C0.189,0.943 -0.000,1.396 -0.000,1.923 L-0.000,13.076 C-0.000,13.603 0.189,14.056 0.566,14.433 C0.944,14.811 1.396,15.000 1.924,15.000 L13.076,15.000 C13.604,15.000 14.056,14.811 14.433,14.433 C14.811,14.056 15.000,13.603 15.000,13.076 L15.000,1.923 C15.000,1.396 14.811,0.943 14.434,0.566 L14.434,0.566 ZM5.385,5.405 C5.975,4.835 6.683,4.550 7.510,4.550 C8.343,4.550 9.055,4.835 9.643,5.405 C10.233,5.975 10.527,6.663 10.527,7.471 C10.527,8.278 10.233,8.966 9.643,9.536 C9.055,10.106 8.344,10.390 7.510,10.390 C6.683,10.390 5.975,10.105 5.385,9.536 C4.797,8.966 4.502,8.278 4.502,7.471 C4.502,6.663 4.797,5.975 5.385,5.405 L5.385,5.405 ZM13.301,12.676 C13.301,12.845 13.243,12.987 13.125,13.101 C13.008,13.215 12.868,13.271 12.705,13.271 L2.265,13.271 C2.096,13.271 1.955,13.215 1.841,13.101 C1.727,12.987 1.670,12.845 1.670,12.676 L1.670,6.348 L3.047,6.348 C2.917,6.757 2.851,7.184 2.851,7.626 C2.851,8.877 3.307,9.943 4.218,10.825 C5.130,11.707 6.227,12.149 7.510,12.149 C8.356,12.149 9.138,11.947 9.854,11.543 C10.570,11.139 11.136,10.591 11.553,9.897 C11.970,9.204 12.178,8.447 12.178,7.626 C12.178,7.184 12.113,6.758 11.983,6.348 L13.301,6.348 L13.301,12.676 ZM13.301,3.955 C13.301,4.143 13.236,4.303 13.106,4.433 C12.976,4.564 12.816,4.628 12.627,4.628 L10.928,4.628 C10.739,4.628 10.579,4.564 10.449,4.433 C10.319,4.303 10.254,4.143 10.254,3.955 L10.254,2.343 C10.254,2.161 10.319,2.003 10.449,1.869 C10.579,1.736 10.739,1.669 10.928,1.669 L12.627,1.669 C12.816,1.669 12.976,1.736 13.106,1.869 C13.236,2.003 13.301,2.161 13.301,2.343 L13.301,3.955 Z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-line hidden-xs">
+            <div id="cssmenu" class="menu-line__inner">
+                <a href="#" class="menu-bt" title="Что мы лечим"></a>
+                <ul class="main-menu">
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="О клинике">
+                            О клинике
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Теория метамерии">
+                            Теория метамерии
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link active" title="Доп.услуги">
+                            Доп.услуги
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" title="Прием психолога">Прием психолога</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Прием семейного врача">Прием семейного врача</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Инфузионная терапия">Инфузионная терапия</a>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#" title="Метамерный массаж">Метамерный массаж</a>
+
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Общий метамерный массаж">Общий метамерный массаж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж спины">Метамерный массаж спины</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж головы">Метамерный массаж головы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж рук">Метамерный массаж рук</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Метамерный массаж воротниковой зоны">Метамерный массаж воротниковой зоны</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" title="Кинезиотейпинг">Кинезиотейпинг</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Изготовление Ортеза">Изготовление Ортеза</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Изготовление ортопедических стелек">Изготовление ортопедических стелек</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Прайсы">
+                            Прайсы
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Книги">
+                            Книги
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Фонд Берсенева">
+                            Фонд Берсенева
+                        </a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="#" class="main-menu__link" title="Контакты">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="search-bt" data-search-bt>
+                    <span class="sprite sprite-search"></span>
+                </a>
+                <form action="#" class="search-form">
+                    <input class="search-text" type="text" placeholder="Введите поисковое слово..." value="">
+                    <input class="search-bt" type="submit" value="">
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="section-bg contacts-page">
+        <div class="container">
+            <div class="article-list__title">
+                Контакты
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="contacts-page-item">
+                        <div class="contacts-page-item__title">
+                            Контакт-центр:
+                        </div>
+                        <ul class="contacts-page-item__list">
+                            <li class="strong">(044) 238-22-31</li>
+                            <li>(067) 218-81-15</li>
+                            <li>(050) 444-30-31</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="contacts-page-item">
+                        <div class="contacts-page-item__title">
+                            Регистратура
+                        </div>
+                        <div class="contacts-page-item__sub-title">взрослого отделения:</div>
+                        <div class="contacts-page-item__text">(044) 272-11-81</div>
+                        <div class="contacts-page-item__mail">center@doctorbersenev.org</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="contacts-page-item">
+                        <div class="contacts-page-item__title">
+                            Регистратура
+                        </div>
+                        <div class="contacts-page-item__sub-title">детского отделения:</div>
+                        <div class="contacts-page-item__text">(044) 272-11-82</div>
+                        <div class="contacts-page-item__mail">institute@doctorbersenev.org</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="contacts-page-item__title">
+                        Почтовый адрес:
+                    </div>
+                    <div class="contacts-page-item__address">
+                        <p>04053, г. Киев,</p>
+                        <p>ул. Бульварно-Кудрявская, 10-Б</p>
+                        <p>(ул. Воровского)</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="contacts-page-item__title">
+                        Время работы клиники:
+                    </div>
+                    <div class="contacts-page-item__address">
+                        <p>Понедельник — Пятница: 8:30 — 19:00</p>
+                        <p>Суббота: 09:00 — 13:00</p>
+                        <p>Воскресенье: выходной</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="contact-form">
+                <div class="contact-form__row">
+                    <div class="contact-form__col">
+                        <input type="text" class="contact-form__text" placeholder="Введите Ваше имя">
+                    </div>
+                    <div class="contact-form__col">
+                        <input type="text" class="contact-form__text" placeholder="Введите Ваш город">
+                    </div>
+                </div>
+                <div class="contact-form__row">
+                    <div class="contact-form__col">
+                        <input type="text" class="contact-form__text" placeholder="Введите Ваш номер телефона">
+                    </div>
+                    <div class="contact-form__col">
+                        <input type="text" class="contact-form__text" placeholder="Введите Ваш e-mail">
+                    </div>
+                </div>
+                <div class="contact-form__row">
+                    <textarea class="contact-form__textarea" name="" id="" cols="30" rows="10" placeholder="Введите текст сообщения"></textarea>
+                </div>
+                <div class="contact-form__row contact-form__bt">
+                    <input type="submit" value="Написать сообщение" class="bt bt-primary">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="section-bg contacts-page">
+        <div class="container">
+            <div class="article-list__title2">
+                Карта проезда
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                            <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts-page">
+        <div class="container">
+            <div class="article-list__sub-title">
+                Как добраться
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="contacts-page__content">
+                        Очаговая неврологическая симптоматика (очаговый неврологический дефицит) — термин, который обозначает неврологические симптомы, свойственные для местного поражения определённых структур центральной или периферической нервной системы. Очаговая неврологическая симптоматика во многих случаях сочетается с общемозговой симптоматикой,
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="footer__logo">
+                        <a href="/" title="">
+                            <img src="img/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="footer__text">
+                        Медицинский центр Берсенева»
+                        это лечение заболеваний
+                        позвоночника, суставов и
+                        нервной системы.
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 footer__small-menu">
+                    <div class="footer__title">
+                        Навигация
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Услуги">Услуги</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="О компании">О компании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Прайсы">Прайсы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Книги">Книги</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" title="Отзывы">Отзывы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="footer__title">
+                        Контакты
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            Киев, ул. Бульварно-Кудрявская
+                        </li>
+                        <li class="footer__item">
+                            Тел. +38 044 33 22
+                        </li>
+                        <li class="footer__item">
+                            Mail: Mail@gmail.com
+                        </li>
+                    </ul>
+                    <div class="footer__soc">
+                        <a href="#" class="round-button">
+                            <span class="round-button__ico round-button__ico--fb">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8px" height="17px">
+                                    <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M1.728,3.293 L1.728,5.632 L-0.001,5.632 L-0.001,8.494 L1.728,8.494 L1.728,17.000 L5.281,17.000 L5.281,8.495 L7.665,8.495 C7.665,8.495 7.888,7.123 7.997,5.622 L5.295,5.622 L5.295,3.665 C5.295,3.373 5.682,2.980 6.065,2.980 L8.001,2.980 L8.001,-0.000 L5.368,-0.000 C1.641,-0.000 1.728,2.864 1.728,3.293 L1.728,3.293 Z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#" class="round-button">
+                            <span class="round-button__ico round-button__ico--ig">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px">
+                                    <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M14.434,0.566 C14.056,0.188 13.604,-0.001 13.076,-0.001 L1.924,-0.001 C1.396,-0.001 0.944,0.188 0.566,0.566 C0.189,0.943 -0.000,1.396 -0.000,1.923 L-0.000,13.076 C-0.000,13.603 0.189,14.056 0.566,14.433 C0.944,14.811 1.396,15.000 1.924,15.000 L13.076,15.000 C13.604,15.000 14.056,14.811 14.433,14.433 C14.811,14.056 15.000,13.603 15.000,13.076 L15.000,1.923 C15.000,1.396 14.811,0.943 14.434,0.566 L14.434,0.566 ZM5.385,5.405 C5.975,4.835 6.683,4.550 7.510,4.550 C8.343,4.550 9.055,4.835 9.643,5.405 C10.233,5.975 10.527,6.663 10.527,7.471 C10.527,8.278 10.233,8.966 9.643,9.536 C9.055,10.106 8.344,10.390 7.510,10.390 C6.683,10.390 5.975,10.105 5.385,9.536 C4.797,8.966 4.502,8.278 4.502,7.471 C4.502,6.663 4.797,5.975 5.385,5.405 L5.385,5.405 ZM13.301,12.676 C13.301,12.845 13.243,12.987 13.125,13.101 C13.008,13.215 12.868,13.271 12.705,13.271 L2.265,13.271 C2.096,13.271 1.955,13.215 1.841,13.101 C1.727,12.987 1.670,12.845 1.670,12.676 L1.670,6.348 L3.047,6.348 C2.917,6.757 2.851,7.184 2.851,7.626 C2.851,8.877 3.307,9.943 4.218,10.825 C5.130,11.707 6.227,12.149 7.510,12.149 C8.356,12.149 9.138,11.947 9.854,11.543 C10.570,11.139 11.136,10.591 11.553,9.897 C11.970,9.204 12.178,8.447 12.178,7.626 C12.178,7.184 12.113,6.758 11.983,6.348 L13.301,6.348 L13.301,12.676 ZM13.301,3.955 C13.301,4.143 13.236,4.303 13.106,4.433 C12.976,4.564 12.816,4.628 12.627,4.628 L10.928,4.628 C10.739,4.628 10.579,4.564 10.449,4.433 C10.319,4.303 10.254,4.143 10.254,3.955 L10.254,2.343 C10.254,2.161 10.319,2.003 10.449,1.869 C10.579,1.736 10.739,1.669 10.928,1.669 L12.627,1.669 C12.816,1.669 12.976,1.736 13.106,1.869 C13.236,2.003 13.301,2.161 13.301,2.343 L13.301,3.955 Z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="footer__title">
+                        Режим работы
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            Пн - Пт 09:00 - 18:00
+                        </li>
+                        <li class="footer__item">
+                            Сб - 09:00 - 17:00
+                        </li>
+                        <li class="footer__item">
+                            Вс - Выходной
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+</body>
+</html>
