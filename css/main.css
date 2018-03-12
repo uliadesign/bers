@@ -1675,3 +1675,61 @@ svg {
 .pagination-second__item-right .pagination-second__ico {
     margin-left: 20px
 }
+
+.modal-form {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #fff;
+}
+.modal-form--second {
+    width: 400px
+}
+.modal-form .modal__header {
+    display: flex;
+    border-bottom: 1px solid #47a28a;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    align-items: flex-end;
+    justify-content: space-between
+}
+.modal-form .modal__header-title {
+    font-size: 1.5rem
+}
+.modal__row {
+    display: flex;
+    justify-content: space-between
+}
+.modal__row--buttons {
+    margin-top: 10px;
+    justify-content: center;
+}
+.modal__col {
+    width: 48%;
+}
+.modal__item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.modal__item label {
+    color: #444;
+    margin-bottom: 3px;
+}
+
+.modal__item .modal__text,
+.modal__item .modal__select {
+    width: 100%;
+    border: 1px solid #ddd;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color: #999;
+}
+.modal__item .modal__textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    height: 89px;
+    padding: 10px 0 0 10px;
+    color: #999;
+}
