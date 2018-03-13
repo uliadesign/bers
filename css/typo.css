@@ -1,0 +1,212 @@
+.typo {
+    line-height: 1.5
+}
+
+.typo > :last-child {
+    margin-bottom: 0
+}
+
+.typo > :first-child {
+    margin-top: 0
+}
+
+.typo a {
+    color: #333;
+    text-decoration: none
+}
+
+.typo a:hover {
+    color: #333;
+    text-decoration: underline
+}
+
+.typo dl, .typo figure, .typo form, .typo form fieldset, .typo ol, .typo p, .typo table, .typo ul {
+    margin: 0 0 .6em 0
+}
+
+.typo figcaption {
+    font-size: .8em;
+    line-height: 1;
+    text-align: center
+}
+
+.typo blockquote {
+    position: relative;
+    min-height: 45px;
+    padding: 0 0 .8em 3.7em;
+    color: #999
+}
+
+.typo blockquote:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.typo blockquote:before {
+    content: '\201C';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10rem;
+    line-height: .8
+}
+
+.typo hr {
+    height: 1px;
+    background: #888
+}
+
+.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6 {
+    margin: 1.5em 0 .5em;
+    line-height: 1.1
+}
+
+.typo h1 {
+    font-size: 2em;
+    color: #000
+}
+
+.typo h2 {
+    font-size: 1.6em
+}
+
+.typo h3 {
+    font-size: 1.4em
+}
+
+.typo h4 {
+    font-size: 1.3em
+}
+
+.typo h5 {
+    font-size: 1.2em
+}
+
+.typo h6 {
+    font-size: 1.1em
+}
+
+.typo ul {
+    margin-left: 1.1em;
+    list-style: disc
+}
+
+.typo ul ul {
+    margin: 0 0 0 2em;
+    list-style: circle
+}
+
+.typo ul ul ul {
+    list-style: square
+}
+
+.typo ol {
+    list-style: none;
+    counter-reset: num
+}
+
+.typo ol ol {
+    margin: 0 0 0 2em
+}
+
+.typo ol li:before {
+    content: counters(num, ".") " ";
+    counter-increment: num
+}
+
+.typo dt {
+    font-weight: 700
+}
+
+.typo dd {
+    margin-bottom: .4em
+}
+
+.typo table {
+    border-color: #000
+}
+
+.typo table caption {
+    font-size: 1.3em
+}
+
+.typo table thead {
+    font-weight: 700
+}
+
+.typo table tfoot {
+    font-weight: 700
+}
+
+.typo table td {
+    padding: .2em .5em .2em .5em
+}
+
+.typo b, .typo strong {
+    font-weight: 700
+}
+
+.typo cite, .typo dfn, .typo em, .typo i, .typo var {
+    font-style: italic
+}
+
+.typo i.fa {
+    font-style: normal !important
+}
+
+.typo code, .typo kbd, .typo pre, .typo samp {
+    font-family: monospace, serif;
+    font-size: 1em
+}
+
+.typo ins {
+    text-decoration: underline
+}
+
+.typo del, .typo s, .typo strike {
+    text-decoration: line-through
+}
+
+.typo mark {
+    background: #ff0;
+    color: #000
+}
+
+.typo small {
+    font-size: 80%
+}
+
+.typo sub, .typo sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+.typo sup {
+    top: -.5em
+}
+
+.typo sub {
+    bottom: -.25em
+}
+
+.typo abbr[title] {
+    border-bottom: 1px dotted
+}
+
+.typo audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+.typo iframe {
+    max-width: 100%
+}
+
+@media (max-width: 767px) {
+    .typo iframe {
+        height: auto
+    }
+}
