@@ -1677,11 +1677,15 @@ svg {
 }
 
 .modal-form {
+    display: none;
     width: 700px;
     max-width: 100%;
     margin: 0 auto;
     padding: 15px;
     background-color: #fff;
+}
+.mfp-content .modal-form {
+    display: block
 }
 .modal-form--second {
     width: 400px
