@@ -1,5 +1,24 @@
-$( function() {
+$(function() {
+  function init() {
+    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
+    $('[data-nav-close]').on('click', toggleMenuIcon);
+    $('.nav__item > a').on('click', toggleSubMenu);
+  };
 
+  function toggleMenuIcon() {
+    $(this).toggleClass('menu-icon--open');
+    $('[data-element="toggle-nav"]').toggleClass('nav--active');
+  };
+
+  function toggleSubMenu() {
+    $(this).toggleClass('nav__link--plus nav__link--minus');
+    $(this).parent().find('ul').slideToggle('nav__sub-list--active');
+  };
+
+  init()
+});
+
+$( function() {
     ( function( factory ) {
         if ( typeof define === "function" && define.amd ) {
 

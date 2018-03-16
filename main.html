@@ -18,7 +18,155 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5b7Lp4T9q6UXrmvYXSY-aw8hGf7mcPQ&language=ru"></script>
 
 </head>
+
 <body onload="initMap()">
+    <nav class="nav" data-element="toggle-nav">
+        <span class="nav__close" data-nav-close></span>
+        <div class="nav__title">Детское отделение</div>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">ЧТО МЫ ЛЕЧИМ?</a>
+                <ul class="nav__sub-list">
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Консультация детского невролога
+ДЦП</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Перинатальное поражение ЦНС (ПП ЦНС)</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Органическое поражение ЦНС</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Родовая травма шейного отдела позвоночника</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Травма периферической нервной системы</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Задержка психоречевого развития</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Нарушение мышечного тонуса</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Спинальные амиотрофии</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Миопатия</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Миелопатия</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Невропатические расстройства</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Ювенильный остеохондроз</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Синдром навязчивых движений</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Задержка психо-речевого развития при генетических заболеваниях</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Синдром вегетативных дисфункций</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Нарушения осанки</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Дефицит внимания с гиперактивностью</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Аутизм</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">О МЕТАМЕРНОМ ЛЕЧЕНИИ</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">ДОКУМЕНТЫ ПРИ ПОСТУПЛЕНИИ</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">ВОПРОС-ОТВЕТ</a>
+            </li>
+        </ul>
+        <div class="nav__title">Взрослое отделение</div>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">ЧТО МЫ ЛЕЧИМ?</a>
+                <ul class="nav__sub-list">
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Консультация детского невролога
+ДЦП</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Перинатальное поражение ЦНС (ПП ЦНС)</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Органическое поражение ЦНС</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Родовая травма шейного отдела позвоночника</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Травма периферической нервной системы</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Задержка психоречевого развития</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Нарушение мышечного тонуса</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Спинальные амиотрофии</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Миопатия</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Миелопатия</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Невропатические расстройства</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Ювенильный остеохондроз</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Синдром навязчивых движений</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Задержка психо-речевого развития при генетических заболеваниях</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Синдром вегетативных дисфункций</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Нарушения осанки</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Дефицит внимания с гиперактивностью</a>
+                    </li>
+                    <li class="nav__sub-item">
+                        <a class="nav__link" href="#">Аутизм</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">О МЕТАМЕРНОМ ЛЕЧЕНИИ</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">ДОКУМЕНТЫ ПРИ ПОСТУПЛЕНИИ</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--plus" href="#">ВОПРОС-ОТВЕТ</a>
+            </li>
+        </ul>
+    </nav>
     <header>
         <div class="header__row">
             <div class="appointment__wrap">
@@ -221,7 +369,7 @@
 
         <div class="menu-line hidden-xs">
             <div id="cssmenu" class="menu-line__inner">
-                <a href="#" class="menu-bt" title="Что мы лечим"></a>
+                <a href="#" class="menu-bt" title="Что мы лечим" data-behaviour="toggle-menu-icon"></a>
                 <ul class="main-menu">
                     <li class="main-menu__item">
                         <a href="#" class="main-menu__link" title="О клинике">
@@ -333,11 +481,19 @@
             </div>
             <div class="main-slider__slide">
                 <img src="img/content/ban.png" alt="">
-                <div class="main-slider__text">
-                    <div class="main-slider__text--desc">
-                        С какой бы болезнью ни пришел челов ек, начни лечение со спины, затем посмотри, что осталось, и исцели его окончательно
+                <div class="main-slider__text-wrap">
+                    <div class="main-slider__text">
+                        <div class="main-slider__text--desc">
+                           <div class="main-slider__quotes__left">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"><path d="M426,7069v-7.5h-5a5,5,0,0,1,5-5V7054a7.505,7.505,0,0,0-7.5,7.5v7.5H426Zm-12.5,0v-7.5h-5a5,5,0,0,1,5-5V7054a7.505,7.505,0,0,0-7.5,7.5v7.5h7.5Z" transform="translate(-406 -7054)"></path></svg>
+                           </div>
+                            С какой бы болезнью ни <br /> пришел человек, начни <br />лечение со спины, затем <br /> посмотри, что осталось, и  <br /> исцели его окончательно
+                           <div class="main-slider__quotes__right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15"><path d="M884,7138v7.5h5a5,5,0,0,1-5,5v2.5a7.505,7.505,0,0,0,7.5-7.5V7138H884Zm12.5,0v7.5h5a5,5,0,0,1-5,5v2.5a7.505,7.505,0,0,0,7.5-7.5V7138h-7.5Z" transform="translate(-884 -7138)"></path></svg>
+                           </div>
+                        </div>
+                        <div class="main-slider__text--title">Гиппократ</div>
                     </div>
-                    <div class="main-slider__text--title">Гиппократ</div>
                 </div>
             </div>
         </div>
